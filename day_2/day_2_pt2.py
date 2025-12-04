@@ -12,7 +12,26 @@ def finding_factors(str_number):
 # if the pattern is invalid -> return False 
 # if the pattern is VALID -> return True
 def loop_check_for_valid(num, max_num_per_factor, str_number):
-    for 
+    pattern = []
+    for each in range(num):
+        pattern.append(str_number[each])
+    # print(pattern)
+    record = num
+    for i in range(len(str_number)):
+        pattern_char = pattern[i % num]
+        target_char = str_number[i]
+
+        if target_char == pattern_char:
+            # Matches
+            # print(f"matched at index {i} | Found {target_char} expected {pattern_char}")
+
+            pass # (You can print here if you want debug info)
+        else:
+            # print(f"NO MATCH at index {i} | Found {target_char} expected {pattern_char}")
+            return False
+    # for each in range(record, max_num_per_factor):
+    #     print(f"each {each} | str_number {str_number[each - 1]} ")
+        # if str_number[] == pattern[each - 1]:
     return True
 
 # if the pattern is invalid -> return False 
@@ -24,7 +43,7 @@ def check_patterns(number):
     
     # return false if the number is invalid 
     # if odd number it cannot give an silly pattern 
-    print(number)
+    # print(number)
     # first find the first character 
     # find the next
     # if the len(number) = 3 -> only 1
@@ -42,8 +61,9 @@ def check_patterns(number):
     for num in factors_list:
         # find how many of each num of factor list exists in number
         max_num_per_factor = int(len(str_number) / num)
-        print(f"per num {num} for {max_num_per_factor}")
+        # print(f"per num {num} for {max_num_per_factor}")
         if loop_check_for_valid(num, max_num_per_factor, str_number):
+            # print(f"Number Invalid here - {str_number}")
             return False
         # so for the max_num_per_factor time we need to repeat with the num in factor lists
         # for every num up until max_num_per_factor it mmyst check if its a vlid solution
@@ -70,8 +90,8 @@ def finding_invalids(number):
 
 
 def main ():
-    open_file = open('day_2_test.txt', 'r')
-    # open_file = open('day_2_input.txt', 'r')
+    # open_file = open('day_2_test.txt', 'r')
+    open_file = open('day_2_input.txt', 'r')
 
     number_of_invalids_lists = []
 
