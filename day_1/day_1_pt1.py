@@ -2,7 +2,7 @@ import pandas as pd
 import os 
 import re
 
-open_file = open('day1_inputa.txt', 'r')
+open_file = open('day_1_pt_input.txt', 'r')
 # open_file = open('day1_test.txt', 'r')
 rotations_lists = open_file.readlines()
 
