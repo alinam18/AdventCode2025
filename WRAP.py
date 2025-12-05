@@ -6,8 +6,6 @@ from markdownify import markdownify
 # personal codes
 import code
 
-# 1. Use an environment variable or a placeholder for safety
-# SESSION = os.getenv("AOC_SESSION") 
 
 url = "https://adventofcode.com/2025/"
 
