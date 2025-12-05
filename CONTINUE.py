@@ -4,8 +4,9 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 from markdownify import markdownify
+# personal codes
+import code
 
-SESSION = '53616c7465645f5f9b25dba9527afd3a6ec2f63b1b239e758de04ff7bf49d3ab28dd82fc52cfd117f9eeb33e673f33293650ec613bc040640f0da8a502048c1f'
 
 input_of_days = input("What day are you completing today? ")
 
@@ -24,7 +25,7 @@ url = f"https://adventofcode.com/2025/day/{input_of_days}"
 
 
 try:
-    response = requests.get(url, cookies={"session": SESSION})
+    response = requests.get(url, cookies={"session": code.SESSION})
     response.raise_for_status()  
     soup = BeautifulSoup(response.text, 'html.parser')
     day_description = soup.find_all(class_="day-desc")
