@@ -38,6 +38,7 @@ def main():
         print(f"Largest Joltage {joltage}")
         total_joltage += joltage
 
+    # Answer - The total Joltage is 16812
     print(f"The total Joltage is {total_joltage}")
 
 
