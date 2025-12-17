@@ -1,0 +1,20 @@
+[3 - 5, 10 - 14, 16 - 20, 12 - 18]
+sort 
+[3 - 5, 10 - 14, 12 - 18, 16 - 20]
+
+compare second digit 
+add 5
+[[3 - 5]]
+
+compare index 2 - (10-14)
+[3 - 5, 10 - 14]
+
+compare index 3 - (12 - 18)
+if range overlap
+[3 - 5, 10 - 18]
+
+compare index 4 - (16 - 20)
+[3 - 5, 10 - 20]
+
+
+
